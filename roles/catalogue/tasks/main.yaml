@@ -1,5 +1,5 @@
 - name: nodejs-setup
-  inculde_role:
+  include_role:
    name: common
    tasks: nodejs.yaml
 - name: app-setup
