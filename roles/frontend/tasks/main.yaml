@@ -1,7 +1,3 @@
-- name: Frontend
-  hosts: Frontend
-  become: yes
-  tasks:
   - name: disable nginx module
     ansible.builtin.command: dnf module disable nginx -y
 
@@ -48,4 +44,3 @@
     notify:
     - Restart nginx
 
-    
