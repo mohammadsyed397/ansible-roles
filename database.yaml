@@ -1,4 +1,5 @@
 - name: "configure{{ component }}"
   hosts: database
+  become: yes
   roles:
    - "{{ component }}"
