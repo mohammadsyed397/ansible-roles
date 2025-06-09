@@ -1,15 +1,15 @@
 - name: nodejs-setup
   include_role:
    name: common
-   tasks: nodejs.yaml
+   tasks_from: nodejs.yaml
 - name: app-setup
   include_role:
     name: common
-    tasks: app-setup.yaml
+    tasks_from: app-setup.yaml
 - name: start the service
   include_role:
     name: common
-    tasks: systemd.yaml
+    tasks_from: systemd.yaml
 - name: copy mongo.repo
   ansible.builtin.copy:
         src: mongo.repo
