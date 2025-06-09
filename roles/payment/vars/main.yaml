@@ -1,0 +1,5 @@
+CART_HOST: cart.robosyed.space
+USER_HOST: user.robosyed.space
+RABBITMQ_HOST: database.robosyed.space
+RABBITMQ_USER: roboshop
+RABBITMQ_PASSWORD: roboshop123
