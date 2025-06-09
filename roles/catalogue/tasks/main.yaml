@@ -1,11 +1,12 @@
-- name: nodejs-setup
-  include_role:
-   name: common
-   tasks_from: nodejs.yaml
+
 - name: app-setup
   include_role:
     name: common
     tasks_from: app-setup.yaml
+- name: nodejs-setup
+  include_role:
+   name: common
+   tasks_from: nodejs.yaml
 - name: start the service
   include_role:
     name: common
