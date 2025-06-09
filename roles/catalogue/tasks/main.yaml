@@ -1,0 +1,22 @@
+- name: nodejs-setup
+  inculde_role:
+   name: common
+   tasks: nodejs.yaml
+- name: app-setup
+  include_role:
+    name: common
+    tasks: app-setup.yaml
+- name: start the service
+  include_role:
+    name: common
+    tasks: systemd.yaml
+- name: copy mongo.repo
+  ansible.builtin.copy:
+        src: mongo.repo
+        dest: /etc/yum.repos.d/mongo.repo
+- name: install mongosh
+  ansible.builtin.package:  
+        name: mongodb-mongosh
+        state: present
+- name: load master data
+  ansible.builtin.shell: mongosh --host database.robosyed.space </app/db/master-data.js
