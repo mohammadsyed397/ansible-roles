@@ -2,7 +2,7 @@
   ansible.builtin.dnf:
       name: "{{ item }}"
       state: installed
-      loop:
+  loop:
        - python3 
        - gcc 
        - python3-devel
