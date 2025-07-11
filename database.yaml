@@ -1,5 +1,5 @@
 - name: "configure{{ component }}"
-  hosts: database
-  become: yes
+  hosts: local_host
+  connection: local
   roles:
    - "{{ component }}"
