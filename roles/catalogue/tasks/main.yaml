@@ -20,4 +20,4 @@
         name: mongodb-mongosh
         state: present
 - name: load master data
-  ansible.builtin.shell: mongosh --host database.robosyed.space </app/db/master-data.js
+  ansible.builtin.shell: mongosh --host mongodb.robosyed.space </app/db/master-data.js
